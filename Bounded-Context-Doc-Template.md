@@ -8,7 +8,7 @@ Please type a brief description of your Bounded Context - please keep it brief b
 ## Ubiquitous Language of the Bounded Context
 
 * Term A: definition
-* ***Term B: Stars on the term indicate that this is a candidate for elevation to the Ubiquitous Language of the Commerce Platform 
+* ***Term B: Stars on the term indicate that this is a candidate for elevation to the Ubiquitous Language of entire group, not just this context 
 * ...
 * Term N: definition
 
