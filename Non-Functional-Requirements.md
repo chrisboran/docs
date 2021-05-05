@@ -113,7 +113,7 @@ Here are some samples from each of the categories of NFRs that we should be thin
 
 # Silent Expectations
 
-2.5 years after I started this document, [Hendrik Lipka](https://salesforce.quip.com/TCPAEASc6zA) shared the following blog post which I think a reader of this document should also think about as it is in the same vein https://theprogrammersparadox.blogspot.com/2020/05/basic-expectations.html (reproduced below in case the original post gets moved)
+2.5 years after I started this document, I read the following blog post which I think a reader of this document should also think about as it is in the same vein https://theprogrammersparadox.blogspot.com/2020/05/basic-expectations.html (reproduced below in case the original post gets moved)
 
 *When interacting with any software, there is a fundamental set of overall ‘properties’ that the users expect. If these are not met by the system or product, they should be considered as software bugs, even if it isn’t explicit misbehavior in the sequence of instructions. It may be very hard for the programmers to fix some of these issues, depending on the state and organization of their code.*
 

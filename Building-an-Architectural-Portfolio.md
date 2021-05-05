@@ -12,7 +12,8 @@ We can categorize the items in the backlog in two dimensions:
 The visibility means if they can be noticed by the main stakeholders. For the customer visible items should be managed by the product manager/owner. Whereby non-visible topics should be managed by architects/tech leads.
 
 The second dimension categorizes the backlog items in issues with negative impact in the past (bugs, investigations, missing limits, 3rd library upgrades, ...) and issues with positive impact in the future (e.g. architectural investments → Falcon, centralized feature toggles, ... ). We can also say these are reactive or proactive work items. 
-[Image: Backlog-Quadrant.png]
+
+![Backlog Quadrant](Backlog-Quadrant.png)
 
 ### feature
 
@@ -36,7 +37,8 @@ In our financial analogy, bugs are assets that we purchased hoping to make custo
 Tech debt is **non-functional** in nature and typically not directly visible in the functionality to the users. It is the cost of past compromises and mistakes and often makes it harder or slower for engineers to build more features to please the customers.  Once enough debt has accumulated even small changes carry the risk of introducing new and undesirable behaviors (bugs).  Typically Tech Debt accrues either because of shortcuts taken to meet dates, or because we didn't really understand all of the non-functional aspects of features that we built in the past.
 
 Tech debt needs to be carefully tracked and advocated for elimination by the Tech Lead of a team - no one else is well positioned to understand both the current drag and also the future costs.
-[Image: Technical-Debt-Quadrant-4.png]
+![Tech Debt Quadrant](Technical-Debt-Quadrant-4.png)
+
 In our financial analogy, this is high interest (like credit card) debt. It builds and produces increased drag the longer we let it mount. Paying off only the minimum balance is a poor strategy and eventually causes us to need to take more drastic action. However if managed carefully it can enable us to produce customer value rapidly when we need to. 
 
 ### tech enablement
@@ -61,7 +63,8 @@ In finance we track debts and assets in terms of dollar values. In software we c
 
 Total debt loads can be compared by using a simple geometric decay formula like: 
 
-[Image: load.png]
+![Load Metric](load.png)
+
 It is important to note that while TechDebt can be viewed in the absolute sense, it depends on a consistent definition being applied across teams in order for the absolute values to be compared. This can be useful to judge which areas of the product are in greater need of technical attention. However even without that consistency across teams, so long as within a team the definitions are applied consistently, the rate of change of TechDebt over time will indicate when debt is accumulating and when it is being removed - giving us trending information about the codebase and overall health of an area of the system.
 Likewise the TechDebt load can be used to help the team make quantifiable decisions on future tasks. When considering different paths, the team might estimate the severity and number of stories required to course correct from a decision to build debt. By using quantification the team can better understand the cost of trading off different approaches in terms that can be shared with product ownership and management more easily.
 
@@ -71,7 +74,9 @@ Just like our creditors hold us individually accountable for the debt that we bu
 
 A useful exercise for self-improvement is for the team to plot their tech debt on the following axis by source so that they can have insight into why their debt builds and can then take actions to control future debt more effectively.
 
-[Image: Tech Debt Categorization.jpeg]A team should strive for tech debt to be mostly around Business Risk Acceptance. Unforeseen Problems happen, and we should do our due diligence to avoid them when possible. Reckless tech debt accumulation in the form of Ignoring Best Practices (usually due to schedule pressure) and making Amateur Mistakes (typically due to not doing your research) should be avoided. Being honest within your team and considering how you arrived at your tech debt can help guide future decision making and processes to get a better outcome.
+![TechDebt Categorization](Tech-Debt-Categorization.jpg)
+
+A team should strive for tech debt to be mostly around Business Risk Acceptance. Unforeseen Problems happen, and we should do our due diligence to avoid them when possible. Reckless tech debt accumulation in the form of Ignoring Best Practices (usually due to schedule pressure) and making Amateur Mistakes (typically due to not doing your research) should be avoided. Being honest within your team and considering how you arrived at your tech debt can help guide future decision making and processes to get a better outcome.
 
 ### Visualize Goals
 
@@ -102,7 +107,9 @@ Part of being agile is being iterative - the processes described herein are quit
 ### AGile Architecture
 
 We talk about the “3-in-a-box” model for leading our engineering teams. Agile - especially scrum - invests a great deal of effort into defining the jobs of the Scrum Master and the Product Owner. We even offer trainings and coaching specifically for those roles in our organization. Less well articulated is the expectations on the 3rd member of that team - the Tech Lead. All three parties must cooperate closely together to make the team successful for the long run. Any one party dominating that relationship will yield to eventual problems for the team. There should not be a planning session, a retrospective, or a sprint review that does not include all three of these leaders as each has an important flag to carry for the development of great software.
-[Image: 3-in-a-box.png]
+
+![Image: 3-in-a-box.png](3-in-a-box.png)
+
 * The Scrum Master should always be team focused - one eye on the commitments and one eye on how to increase velocity by ensuring the long term health of what the team owns. Only the Scrum Master can commit the team to a course of action, and once committed, the Scrum Master owns the individual sprint backlog 
 * The Product Owner must listen to the input from the Tech Lead and the Scrum Master to shape the product portfolio plans to ensure that the vision can be achieved in a reasonable business timeframe. Ultimately all prioritization belongs to the Product Owner, but the Scrum Master is not obligated to commit to that backlog if it is not in the team’s best interest
 * The Tech Lead must proactively build the architectural portfolio and the log of tech debt in order to help articulate health and tradeoffs for the other leaders to be able to understand

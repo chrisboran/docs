@@ -15,7 +15,7 @@ We want to bring a bit more transparency and deliberate planned technological in
 
 We strive to make our decisions on the right hand side of the following graph, as opposed to letting them fall to the left. 
 
-[Image: Tech Debt Categorization.jpeg]
+![Tech Debt Categorization](Tech-Debt-Categorization.jpg)
 
 While we have a focus on our ability to ship code reliably with high quality, we also want to encourage the following behaviors:
 
@@ -39,7 +39,7 @@ Each Context will have a TRB, which is a standing working group tasked with:
 > TRBs attempt to provide a framework to support our Tech Leads and provide visibility for the leadership team around the technical decision making of the organization. 
 
 
-[Image: 3-in-a-box.png]
+![Accountable Partnership](3-in-a-box.png)
 ### **Virtual Architecture Teams (VAT)**
 
 VATs are standing working groups of multiple TRBs tasked with:

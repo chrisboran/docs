@@ -9,7 +9,9 @@ This proposal is to create a lighter-weight process around sizing *during the ea
 When working at this phase, Accuracy is much more important than Precision. Having a wide range is perfectly acceptable - widening the range indicates to the business that there is uncertainty and risk in our estimation process. However it defines the bounds in which an outcome can be expected and enables the business to make prioritization decisions.
 
 We should not be afraid to take information and make low-confidence estimates that clearly indicate the risk of being wrong (by widening the range) with short time horizons to think about the details. This exercise is at the heart of good Agile planning.  
-[Image: PrecisionVsAccuracy2.png]
+
+![Precision vs Accuracy](PrecisionVsAccuracy2.png)
+
 ### Under Pressure
 
 One of the possible reasons we seek precision in our current model is that we give ourselves too much time to think about it. We research and plan and things start to solidify. Then the business changes its mind and we start all over - lots of work wasted planning things we don’t work on. Instead of hoping that the business will stop trying to be Agile, we should lean in and embrace a simple fact: no matter what we do in estimation, it is inherently wrong. Just by accepting the fact that we cannot possibly be right, we free ourselves of some burdens. 

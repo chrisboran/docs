@@ -4,7 +4,7 @@
 
 Please type a brief description of your Bounded Context - please keep it brief but include the criteria by which you define what is in bounds and what is out of bounds for your context - the way that we will decide if new functionality lives in your context. This should be brief and easy to explain in a 5 minute conversation, and clear to all members of your team.
 
-[Image: Sample Bounded Context Dependency Map.png]
+![Sample Bounded Context Dependency Map](SampleBCDMap.png)
 ## Ubiquitous Language of the Bounded Context
 
 * Term A: definition
