@@ -16,7 +16,7 @@ When I was first transitioning from leading through command into leading through
 
 - accountable for the overall technical quality of the products 
 - continuously evolving and sharing a long term vision so we all know where we want to go
-- not the dictator, but the validator - architects should be mostly concerned with the things that are hard to change and the guardrails for quality - give teams freeom to make most decisions for themselves but make sure to first place the right constraints and to inspect the outcomes
+- not the dictator, but the validator - architects should be mostly concerned with the things that are hard to change and the guardrails for quality - give teams freedom to make most decisions for themselves but make sure to first place the right constraints and to inspect the outcomes
 - team autonomy is the goal, but responsible autonomy requires scrutiny and healthy debate as to how those decisions effect the whole company
 - kindling and nuturing engineering passion in the teams -- sometimes by inspiring, sometimes by praising and disseminating
 - scanning the horizons for signs of misalignment early
@@ -46,11 +46,11 @@ When I was first transitioning from leading through command into leading through
   - it is easy to tell ourselves a story about why someone is doing something. Usually we are wrong. Instead assume that everyone is doing the best they can under the constraints they think they have - look to expose those constraints and either correct the constraints, or adapt your view to one that accounts for these constraints
   - No one is ever the villan in the story of their own lives   
 - focus on good solutions, not perfect ones 
-- get the non funciontal requirements defined early - it is key to understanding the full scope fo the problem
+- get the non functional requirements defined early - it is key to understanding the full scope fo the problem
 - do not disparrage mistakes of the past - everyone makes the best decisions they could at the time they were made - focus on the future, do not dwell on sins
 - remember that the team is closer to the problem than you are -- they will have more nuances that you do not have access to 
-- double check assumptions, goals, and end-games -- typically you will find unstated lack of alignment that complicates things - if you aren't all going to the same place, you will not aggree on how to get there. Get those alignments early instead of discovering them late in the cycle
-- avoid domineering analagies or dictatorial methods - people shut down and you lose trust
+- double check assumptions, goals, and end-games -- typically you will find unstated lack of alignment that complicates things - if you aren't all going to the same place, you will not agree on how to get there. Get those alignments early instead of discovering them late in the cycle
+- avoid domineering analogies or dictatorial methods - people shut down and you lose trust
 - embrace being vulnerable with others - "I don't understand" or "I'm confused" or "I don't know a lot about that" are powerful tools that show others you want to learn and open your own mind to a more team dynamic of peer discovery which is more useful for problem solving
 - Focus on problem solving as a team rather than individuals
 - Show humility - the team can find answers you cannot
