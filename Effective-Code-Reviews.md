@@ -26,7 +26,7 @@ Submitters should respect the time of their peers. Before submitting code for re
 
 ## Responsibilities of a reviewer
 
-Reviers should recognize that they are inherently in a position of responsibility. While we believe that engineers at all levels should be reviewers - even entry level - they should take this responsibility seriously. While reviewing, the reviewer should keep the following in mind:
+Reviewers should recognize that they are inherently in a position of responsibility. While we believe that engineers at all levels should be reviewers - even entry level - they should take this responsibility seriously. While reviewing, the reviewer should keep the following in mind:
 
 * take the time to review it right
 * devote undivided attention or the benefit is lost
