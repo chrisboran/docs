@@ -24,7 +24,7 @@ Next Team B would create a branch and start working - Team B would do the coding
 
 As part of this interaction, future bugs would likely be fixed by the Apache project maintainers - they take responsibility for the maintenance in exchange for the contribution. 
 
-### Applying the model in Salesforce
+### Applying the model here 
 
 If we were to revisit this example with the lens of an open source project, could we approach it the same way? If Team A either can't commit or has other priorities that compete, would they instead be more inclined to behave like an Apache project?
 
