@@ -191,7 +191,7 @@ Watch our for wording that is ambiguous or leaves it up to the reader’s interp
 
 In order for engineering to accept a non functional requirement, they must have a clear idea of how we will test in order to verify that requirement. Just like DoD forces us to know ‘when we are done for a Feature, we need clarity in our non-functional requirements just the same way. If we don’t know how to test and verify it, we don’t know we are done.
 
-### PrioritIZATION
+### Prioritization
 
 Clearly indicating how important this requirement is relative to other requirements (ie prioritizing your NFRs) is a great practice that we tend to do subconsciously - but our NFRs should be prioritized against each other just like we do for functional requirements as we all know that it is seldom possible to design for all requirements equally.
 
