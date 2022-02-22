@@ -14,7 +14,7 @@ Always try to start by being very clear: **What problem am I solving?** It is re
 
 ### Resarch
 
-Start researching which services, products, and open source projects might be usable to solve your problem - do your research before considering building anything yourself. Remember that we should be **focused on building IP in our business space** for Salesforce, and we should make use of tools developed by others before going out on our own.
+Start researching which services, products, and open source projects might be usable to solve your problem - do your research before considering building anything yourself. Remember that we should be **focused on building IP in our business space** for the company, and we should make use of tools developed by others before going out on our own.
 
 ### Prioritize
 
