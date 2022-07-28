@@ -112,10 +112,10 @@ These requirements are used to evaluate the ‘readiness’ of all services. Ind
 * All service **must** provide a basic health checking endpoint to be used to assess [base service health](https://microservices.io/patterns/observability/health-check-api.html) post deployment in addition to any infrastructure health checking they may do 
 * All services **should** attempt to maintain the minimum parity gap they can between their different deployment environments (dev, staging and production)
 * All services **must** clearly document which Compliances they are in scope of (ie SOX, SOC2, PCI) 
-* All services **must** use GUS ReleaseObject and Release Stamps to release new versions of their software in order to enable GUS Reporting for Compliance (for traceability of changes)
+* All services **must** use standard company audit records to release new versions of their software in order to enable reporting for Compliance (for traceability of changes)
     * All services **could** leverage CC Release Engineering’s Cortana system to achieve this
 * All services **must** maintain in their service documentation a copy of their deployment pipeline design
-* All services **must** onboard with the Salesforce Change Management Process and use [GUS ChangeCases](https://salesforce.quip.com/AIh0AY5RLgfw)
+* All services **must** onboard with the standard Change Management Process and use auditable change logs
 * All services **must** have a documented and audited formal process for approving deployments into production environments to achieve Compliance requirements of having at least 2 individuals involved in approving any change making it to production (Separation of Duties) 
 * All services **must** respect posted change windows for their product if their deployments could have potential to disrupt customer service.
 * All T0/T1 services **must** respect the moratoriums and exception processes of all services that depend on them (e.g. thanksgiving holiday). 
@@ -139,9 +139,9 @@ These requirements are used to evaluate the ‘readiness’ of all services. Ind
 * All services **must** emit service level metrics and not rely solely on infrastructure level metrics that are accessible for service owners, support, and SRE
 * All services **should** provide a mechanism to accept/forward request IDs included in log lines (and possibly other metrics) to facilitate distributed tracing
 * All services **could** use structured logging to emit key metrics on a per-request basis 
-* All services **must** provide custom dashboards reflecting their service metrics for stakeholders to consume using the well-known Salesforce supported toolchains
+* All services **must** provide custom dashboards reflecting their service metrics for stakeholders to consume using the well-known supported toolchains
     * All T0/T1 services **must** provide a health overview dashboard visible to all stakeholders (support, SRE, dependent services) for both production and staging environments
-* All services **must** **** feed logging and monitoring data to a Salesforce supported toolchain in order to engage stakeholders outside the team
+* All services **must** **** feed logging and monitoring data to a supported toolchain in order to engage stakeholders outside the team
 * All services **could** use augmentative tooling within their service team to get deeper insights
 * All services **must** be able to debug in a production-like staging environment without the use of a debugger to prove the observability of their system
 * All T0/T1 services **must** publish a quarterly scorecard that provides transparent visibility to:
@@ -156,7 +156,7 @@ These requirements are used to evaluate the ‘readiness’ of all services. Ind
 * All services **must** maintain an up to date record in the [Service Catalog](https://sfdc.co/servicecatalog) 
 * All services **must** place their design documentation in a common location linked from their Service Catalog Record where others can discover and access it, and must be comprehensive enough for a peer engineer to read and understand the data flows and processes of the service
 * All services **must** proactively create run-books for every alert they generate so that the individual receiving an alert has a clear plan of action to minimize customer impact
-* All services **must** have a clear plan for how they enable SRE for incident responses and onboard with Salesforce Trust accordingly
+* All services **must** have a clear plan for how they enable SRE for incident responses and onboard accordingly
 * All services **must** define an on-call rotation for emergency support
 * All services **must** have a clear 24/7 support plan with an SLA response time for requests for engineering support during Sev0/Sev1 events
     * All T0 services **must** target an SLA of less than 15 minutes for response
@@ -174,7 +174,7 @@ Here we attempt to summarize the cross-cutting security requirements in order to
 
 ### Base Security Best Practices
 
-All services **must** adhere to relevant Salesforce Security Policies  - [Salesforce Security Best Practices](https://confluence.internal.salesforce.com/pages/viewpage.action?spaceKey=SECURITY&title=Security+Best+Practices)
+All services **must** adhere to relevant standard Security Policies
 **Detailed resources**
 
 * Apply Defense in Depth
@@ -187,16 +187,8 @@ All services **must** adhere to relevant Salesforce Security Policies  - [Salesf
 * Make Security Usable
 * Protect Customer Data
 
-* [Finding security resources](https://confluence.internal.salesforce.com/display/SECURITY/Find+Security+Resources)
-* [Salesforce Information Security Standards](https://confluence.internal.salesforce.com/display/public/SECURITY/Salesforce+Information+Security+Standards)
-* [Salesforce ALL Security Standards](https://confluence.internal.salesforce.com/display/public/SECURITY/All+Security+Standards)
-
-
 **External Standards and Compliance**
 All services **must** adhere to relevant compliance for the scope of their service (ie GDPR, SOC, SOX, PCI, etc.)
-
-* [Salesforce Compliance Home](https://confluence.internal.salesforce.com/pages/viewpage.action?pageId=983045)
-* [Compliance getting started for new products and services](https://confluence.internal.salesforce.com/display/COM/Getting+Started+and+Quick+Reference+for+New+Products+and+Services)
 
 ### Security Requirements
 
@@ -230,21 +222,17 @@ The following is a list of security requirements, grouped by security control ty
     * All services **must** follow [PII management best practices](https://medium.com/@joecrobak/seven-best-practices-for-keeping-sensitive-data-out-of-logs-3d7bbd12904)
 * Security Assurance and Secure SW Development Lifecycle
     * All services **must** maintain an up to date [Threat Model](http://www.agilemodeling.com/artifacts/securityThreatModel.htm) 
-    * All services **should** work with the security organization to ensure proper [penetration testing](https://searchsecurity.techtarget.com/definition/penetration-testing) is performed at a regular cadence.  See CC ProdSec to add your service to the [Salesforce Bug Bounty program](https://confluence.internal.salesforce.com/display/SECURITY/Salesforce+Security+Bug+Bounty+Program).
-    * All services **must** include in their documentation set a link to the [Security Assessments](https://confluence.internal.salesforce.com/display/SECURITY/Salesforce+Secure+Development+Lifecycle) that have been performed prior to going to production
-    * All service **must** document and [classify](https://confluence.internal.salesforce.com/display/public/SECURITY/SFSS-019+Data+Classification) all of the data they handle and store for security risk assessment
-    * All service **must** be covered with automated vulnerability scanning, and **must** adhere to [GUS security bug SLAs](https://confluence.internal.salesforce.com/display/SECURITY/Security+Bug+SLA%2C+Release%2C+and+Exception+Process)
-        * If not, appropriate [GRC extensions](https://confluence.internal.salesforce.com/pages/viewpage.action?pageId=49520800) should be in place.
+    * All services **should** work with the security organization to ensure proper [penetration testing](https://searchsecurity.techtarget.com/definition/penetration-testing) is performed at a regular cadence
+    * All services **must** include in their documentation set a link to their Security Assessment
+    * All service **must** document and classify all of the data they handle and store for security risk assessment
+    * All service **must** be covered with automated vulnerability scanning, and **must** adhere to security SLAs
+        * If not, appropriate GRC extensions should be in place.
 * Operational Security and Build Infrastructure
     * All services **must** maintain an immutable audit trail of changes applied both to the codebase and to production
         * This audit trail **must** include detailed information about what is being changed, when and by whom
-        * See Salesforce guidance [here](https://confluence.internal.salesforce.com/display/SECURITY/Secure+Chain+of+Trust+Guidelines)
-* Dependent 3rd Party Libraries (3PP)
     * All services **must** have a defined, documented, and audited process for updating 3rd party dependencies to their latest levels 
         * All services **should** *proactively* update their 3rd party dependencies once per release cycle to reduce risks
-        * See Salesforce 3PP guidance [here](https://confluence.internal.salesforce.com/display/SECURITY/3PP%3A+Third-Party+and+Open+Source+Usage+Program)
-
-
+        
 
 ## Disaster Recovery
 
