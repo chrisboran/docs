@@ -4,7 +4,7 @@ As we continue to become more distributed it is important to set some ground rul
 
 To live up to these expectations we must ensure that as we take dependencies our overall experience when using our platform offering does not degrade.  We MUST also understand that we have just as much to gain (or lose) due to the performance characteristics of our platform - we share our customers successes.
 
-The format of this document is designed to give an indication of requirements in [Moscow Method](https://en.wikipedia.org/wiki/MoSCoW_method) (Must, Should, Could, Won’t) to make it clear to teams how to prioritize their investments. In order to help teams self-determine progress in preparing to launch a new service as customer GA ready, we have prepared a [Service Production-Readiness Self Assessment]() to help remind them of what the critical things that they should be thinking about are. The assessment is built against these requirements and should be performed at least annually, and an up-to-date copy should be linked from their service documentation for external visibility. 
+The format of this document is designed to give an indication of requirements in [Moscow Method](https://en.wikipedia.org/wiki/MoSCoW_method) (Must, Should, Could, Won’t) to make it clear to teams how to prioritize their investments. In order to help teams self-determine progress in preparing to launch a new service as customer GA ready, we have prepared a *Service Production-Readiness Self Assessment* to help remind them of what the critical things that they should be thinking about are. The assessment is built against these requirements and should be performed at least annually, and an up-to-date copy should be linked from their service documentation for external visibility. 
 
 ## Tiers of Service
 
@@ -113,13 +113,11 @@ These requirements are used to evaluate the ‘readiness’ of all services. Ind
 * All services **should** attempt to maintain the minimum parity gap they can between their different deployment environments (dev, staging and production)
 * All services **must** clearly document which Compliances they are in scope of (ie SOX, SOC2, PCI) 
 * All services **must** use standard company audit records to release new versions of their software in order to enable reporting for Compliance (for traceability of changes)
-    * All services **could** leverage CC Release Engineering’s Cortana system to achieve this
 * All services **must** maintain in their service documentation a copy of their deployment pipeline design
 * All services **must** onboard with the standard Change Management Process and use auditable change logs
 * All services **must** have a documented and audited formal process for approving deployments into production environments to achieve Compliance requirements of having at least 2 individuals involved in approving any change making it to production (Separation of Duties) 
 * All services **must** respect posted change windows for their product if their deployments could have potential to disrupt customer service.
 * All T0/T1 services **must** respect the moratoriums and exception processes of all services that depend on them (e.g. thanksgiving holiday). 
-    * Change Windows and Moratoriums **should** be enforced using Change Traffic Control (CTC). 
 * All services **must** define and implement a rollout strategy that appropriately manages the blast radius of a mistake at each stage of deployment, and have reviewed worst case scenarios with their management team
     * All T0/T1 services **must** have a [canary deployment strategy](https://martinfowler.com/bliki/CanaryRelease.html) - there can be no grid-wide pushes
     * All T0/T1 services **must** limit the blast radius of any step in their deployment process to not more than 10% of the production tenants 
@@ -130,7 +128,7 @@ These requirements are used to evaluate the ‘readiness’ of all services. Ind
 
 ## Observability
 
-* All services **must** monitor the [READS](https://confluence.internal.salesforce.com/display/MONIN/Onboard+Falcon+Services+to+READS+Dashboard+Using+Intake+UI) metrics: **R**equest Rate, **E**rror Rate, **A**vailability, **D**uration (Latency) and **S**aturation of your SLIs
+* All services **must** monitor the [READS](https://engineering.salesforce.com/reads-service-health-metrics-1bfa99033adc/) metrics: **R**equest Rate, **E**rror Rate, **A**vailability, **D**uration (Latency) and **S**aturation of your SLIs
     * All T0/T1 services **must** actively review their performance monitoring in order to understand normal operations 
 * All services **must** issue alerts as it approaches thresholds in all SLIs and when the service is over SLA
     * All T0/T1 services **must** issue alerts against production-like staging environments to provide production-like support for the staging environment
@@ -145,7 +143,7 @@ These requirements are used to evaluate the ‘readiness’ of all services. Ind
 * All services **could** use augmentative tooling within their service team to get deeper insights
 * All services **must** be able to debug in a production-like staging environment without the use of a debugger to prove the observability of their system
 * All T0/T1 services **must** publish a quarterly scorecard that provides transparent visibility to:
-    * [READS](https://confluence.internal.salesforce.com/display/MONIN/Onboard+Falcon+Services+to+READS+Dashboard+Using+Intake+UI) metrics: **R**equest Rate, **E**rror Rate, **A**vailability, **D**uration (Latency) and **S**aturation of your SLIs
+    * [READS](https://engineering.salesforce.com/reads-service-health-metrics-1bfa99033adc/) metrics: **R**equest Rate, **E**rror Rate, **A**vailability, **D**uration (Latency) and **S**aturation of your SLIs
     * Achieved Performance SLIs compared to defined
     * VOC quotes from within the quarter
     * PRBs and assessments for any SEV1 or higher outages
@@ -153,7 +151,7 @@ These requirements are used to evaluate the ‘readiness’ of all services. Ind
 
 ## Operations
 
-* All services **must** maintain an up to date record in the [Service Catalog](https://sfdc.co/servicecatalog) 
+* All services **must** maintain an up to date record in the Service Catalog
 * All services **must** place their design documentation in a common location linked from their Service Catalog Record where others can discover and access it, and must be comprehensive enough for a peer engineer to read and understand the data flows and processes of the service
 * All services **must** proactively create run-books for every alert they generate so that the individual receiving an alert has a clear plan of action to minimize customer impact
 * All services **must** have a clear plan for how they enable SRE for incident responses and onboard accordingly
@@ -206,19 +204,10 @@ The following is a list of security requirements, grouped by security control ty
     * All services **could** encrypt data client side before serializing to storage 
 * Secrets, Key Management and PKI certificates
     * All services **must** store all secret material (ie keys, credentials, certificates) in an approved
-        *  For Core et al  - [secret storage solution](https://salesforce.quip.com/gubiAaKc3XGC)
-        * For a centralized key management solution, see CC operated vault - [CKM](https://confluence.internal.salesforce.com/display/ENG/Centralized+Key+Management+%2528CKM%2529+Service)
-            * For eCom, AWS, and Falcon based services (current guidance)
-        * For a Falcon instance vault (which are regionalized)
-            * [Service Owner Manual for V1 Terraform Workflows in Spinnaker on GCP DevMVP](https://salesforce.quip.com/KXW3AIdG1uF8)
-            * [Vault Onboarding Process](https://docs.google.com/document/d/13iJamSlN_DlXOCMbO03mMOtN6K3-JV9R8h_qZAL5xhQ/edit)
-            * [SFDC Vault Access Configuration Service Design](https://salesforce.quip.com/7CQlA7D1WufZ)
-            * [SFDC Vault Access Configuration API Guide](https://salesforce.quip.com/nDnFANOXp0Td)
-    * All services **must not** check secrets into source control, see [Grover tool](https://confluence.internal.salesforce.com/pages/viewpage.action?pageId=160761045)
-        * The [Secrets Guild Chatter group](https://gus.lightning.force.com/lightning/r/CollaborationGroup/0F9B0000000De6nKAC/view) has many, many links and references
+    * All services **must not** check secrets into source control
 * Logging and Monitoring
     * All services **must** retain a trail to the requesting user when performing an action on behalf of a user
-    * https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html
+    * [OWASP Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
     * All services **must** follow [PII management best practices](https://medium.com/@joecrobak/seven-best-practices-for-keeping-sensitive-data-out-of-logs-3d7bbd12904)
 * Security Assurance and Secure SW Development Lifecycle
     * All services **must** maintain an up to date [Threat Model](http://www.agilemodeling.com/artifacts/securityThreatModel.htm) 
